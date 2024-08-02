@@ -23,26 +23,13 @@ body {
     gap: 3rem;
 }
 
-.data__result {
-    box-sizing: border-box;
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 2rem;
-    text-align: center;
-    box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.1);
-    display: grid;
-    place-items: center;
-    align-content: center;
-    overflow-y: hidden;
-    position: relative;
-    word-break: break-word;
-}
-
 .logo__alura {
     text-align: center;
     height: 3rem;
     cursor: pointer;
 }
+
+/* data entry */
 
 .datas {
     display: flex;
@@ -107,4 +94,52 @@ body {
 .decrypt:hover {
     background-color: var(--light-blue-200);
     color: var(--dark-blue-300);
+}
+
+/* data output */
+
+.data__result {
+    box-sizing: border-box;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    place-items: center;
+    align-content: center;
+    overflow-y: hidden;
+    position: relative;
+    word-break: break-word;
+    gap: 2rem;
+}
+
+.data__result.active {
+    align-content: space-between;
+}
+
+.data__result-container {
+    display: grid;
+    gap: 2rem;
+    place-items: center;
+}
+
+.data__result-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 20rem;
+    text-align: center;
+    color: var(--gray-500);
+}
+
+.btn__copy {
+    display: none;
+    transition: 0.3s;
+}
+
+.btn__copy.active {
+    display: block;
+    position: absolute;
+    bottom: 2rem;
 }

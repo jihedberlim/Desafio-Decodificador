@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador de Texto</title>
 
     <!-- Style -->
-     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    
+    <main>
+        <div class="container">
+            <img src="./assets/logo-alura.png" alt="Logo Alura">
+            <section class="datas">
+                <textarea name="input" id="input" placeholder="Digite seu texto..."></textarea>
+                <div class="data__actions">
+                    <div class="data__info">
+                        <p>&#9432; Apenas letras minúsculas e sem acento.</p>
+                    </div>
+                    <div class="btn__actions">
+                        <button class="btn__encrypt">Criptografar</button>
+                        <button class="btn__decrypt">Descriptografar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="data__result">
+                <div class="data__result-container">
+                    <p class="text__decrypt"></p>
+                    <img class="character__img" src="./assets/light-character.svg"
+                        alt="Personagem com lupa observando um diamante">
+                </div>
+                <div class="data__result-info">
+                    <h2>Nenhuma mensagem encontrada</h2>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                <button class="btn__copy">Copiar</button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
 </body>
+
 </html>

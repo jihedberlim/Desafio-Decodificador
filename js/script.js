@@ -29,6 +29,7 @@ encryptButton.addEventListener("click", () => {
             }
 
             userInput.value = ""
+            copyDataOutput.innerHTML = "Copiar"
             console.log(typedTextArray[i])
         }
     }
@@ -62,8 +63,15 @@ decryptButton.addEventListener("click", () => {
         textDecrypt.innerHTML = decryptedText
         userInput.value = ""
         copyDataOutput.classList.remove("active2")
+        copyDataOutput.innerHTML = "Copiar"
         cleanOutputData()
     }
+})
+
+// CLIPBOARD API FUNCTION
+copyDataOutput.addEventListener("click", () => {
+    navigator.clipboard.writeText(textDecrypt.innerHTML)
+    console.log("Copied")
 })
 
 function cleanOutputData() {

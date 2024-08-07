@@ -158,6 +158,12 @@ body {
     bottom: 2rem;
 }
 
+.btn__copy.active2 {
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: var(--dark-blue-300);
+    color: var(--white);
+}
 /* FOOTER */
 
 footer {

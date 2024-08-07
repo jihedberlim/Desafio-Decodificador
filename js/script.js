@@ -27,7 +27,7 @@ encryptButton.addEventListener("click", () => {
             if (substitutions[typedTextArray[i]]) {
                 typedTextArray[i] = substitutions[typedTextArray[i]]
             }
-            
+
             userInput.value = ""
             console.log(typedTextArray[i])
         }
@@ -43,6 +43,27 @@ encryptButton.addEventListener("click", () => {
 
     console.log(typedTextArray)
     copyDataOutput.classList.remove("active2")
+})
+
+// DECRYPT TEXT FUNCTION
+decryptButton.addEventListener("click", () => {
+    let typedText = userInput.value
+    
+    if (typedText == "") {
+        alert("Não existe para descriptografar!")
+    } else {
+        let decryptedText = typedText
+            .replaceAll("ai", "a")
+            .replaceAll("enter", "e")
+            .replaceAll("imes", "i")
+            .replaceAll("ober", "o")
+            .replaceAll("ufat", "u");
+
+        textDecrypt.innerHTML = decryptedText
+        userInput.value = ""
+        copyDataOutput.classList.remove("active2")
+        cleanOutputData()
+    }
 })
 
 function cleanOutputData() {

@@ -30,7 +30,7 @@ encryptButton.addEventListener("click", () => {
 
             userInput.value = ""
             copyDataOutput.innerHTML = "Copiar"
-            console.log(typedTextArray[i])
+            // console.log(typedTextArray[i])
         }
     }
 
@@ -42,7 +42,7 @@ encryptButton.addEventListener("click", () => {
         cleanOutputData()
     }
 
-    console.log(typedTextArray)
+    // console.log(typedTextArray)
     copyDataOutput.classList.remove("active2")
 })
 
@@ -74,6 +74,16 @@ copyDataOutput.addEventListener("click", () => {
     console.log("Copied")
 })
 
+// CHANGE BUTTON AND MESSAGE FUNCTION
+const copyButton = document
+    .querySelector(".btn__copy")
+    .addEventListener("click", () => {
+        copyDataOutput.classList.add("active2")
+        copyDataOutput.innerHTML = "Copiado"
+        textDecrypt.innerHTML = "Mensagem copiada! Cole no campo destinado para poder descriptografar!"
+    })
+
+// CLEAN DATA RESULT SECTION FUNCTION
 function cleanOutputData() {
     let cleanImage = document.querySelector(".character__img").remove()
     let cleanInfo = document.querySelector(".data__result-info").remove()

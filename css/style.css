@@ -124,6 +124,7 @@ body {
 }
 
 .text__decrypt {
+    color: var(--dark-blue-300);
     font-size: 1.6rem;
     font-weight: 500;
     text-align: left;
